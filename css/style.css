@@ -30,9 +30,47 @@ body {
 /* LAYOUT
 /*******************************************/
 header {
-
-}
-
+     display: grid;
+     grid-template-columns: auto 1fr;
+     align-items: center;
+     padding: 1em;
+     background-color: #f7f7f7;
+   }
+   
+   .logo {
+     max-width: 100%;
+   }
+   
+   .logo img {
+     display: block;
+     max-width: 40%;
+     height: auto;
+   }
+   
+   nav {
+     text-align: right;
+     white-space: nowrap;
+   }
+   
+   nav ul {
+     display: inline-block;
+     margin: 0;
+     padding: 0;
+     list-style: none;
+   }
+   
+   nav ul li {
+     display: inline-block;
+     margin: 0 0.5em;
+   }
+   
+   nav ul li a {
+     display: block;
+     padding: 0.5em;
+     color: #333;
+     text-decoration: none;
+   }
+   
 footer {
 
 }
@@ -40,3 +78,9 @@ footer {
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+
+header > h1 {
+     display: none;
+}
+
+
