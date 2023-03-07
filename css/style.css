@@ -20,9 +20,18 @@
 /******************************************
 /* BASE STYLES
 /*******************************************/
+html, body {
+     max-width: 100%;
+     overflow-x: hidden;
+ }
+
 
 body {
 
+}
+
+.navigation {
+     background-color: cornflowerblue;
 }
 
 
@@ -34,7 +43,13 @@ header {
      grid-template-columns: auto 1fr;
      align-items: center;
      padding: 1em;
-     background-color: #f7f7f7;
+     background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 100%);     
+     padding-bottom: 10em;
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     z-index: 999;
    }
    
    .logo {
@@ -43,7 +58,7 @@ header {
    
    .logo img {
      display: block;
-     max-width: 40%;
+     max-width: 65%;
      height: auto;
    }
    
@@ -67,7 +82,7 @@ header {
    nav ul li a {
      display: block;
      padding: 0.5em;
-     color: #333;
+     color: #ffffff;
      text-decoration: none;
    }
    
@@ -84,3 +99,68 @@ header > h1 {
 }
 
 
+
+
+
+
+
+.navigation {
+     transition: 0.2s;
+     height: 30em;
+}
+
+.navigation .navArea ul li a {
+     padding: 1em;
+     font-size: 3vw;
+     font-weight: 600;
+
+
+}
+
+
+.navigation .navArea ul li:hover a {
+     background-image: url(../images/hero_actor.webp);
+     object-fit: cover;
+}
+
+
+
+
+
+
+.hero {
+     height: 80vh;
+     background-image: url(../images/hero_actor.webp);
+     background-size: cover;
+     background-repeat: no-repeat;
+
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-end;
+  
+   }
+   
+   .hero-nav {
+     background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 100%);     
+     padding-top: 10em;
+   }
+   
+   .hero-nav ul {
+     font-size: 2.8vw;
+     display: flex;
+     flex-direction: row;
+     list-style: none;
+   }
+
+
+   .hero-nav a {
+     color: #ffffff;
+     text-decoration: none;
+     transition: 0.5s
+   }
+   
+   .hero-nav a:hover {
+     background-image: url(../images/hero_actor.webp);
+     transform: scale(1.6) translateY(-1em);
+   }
+   
