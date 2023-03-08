@@ -41,16 +41,16 @@ body {
 header {
      display: grid;
      grid-template-columns: auto 1fr;
-     align-items: center;
-     padding: 1em;
      background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 100%);     
      padding-bottom: 10em;
-     position: fixed;
-     top: 0;
-     left: 0;
+     position: absolute;
      width: 100%;
      z-index: 999;
    }
+
+header > nav {
+     padding-top: 1em;
+}
    
    .logo {
      max-width: 100%;
@@ -99,11 +99,6 @@ header > h1 {
 }
 
 
-
-
-
-
-
 .navigation {
      transition: 0.2s;
      height: 30em;
@@ -118,27 +113,25 @@ header > h1 {
 }
 
 
-.navigation .navArea ul li:hover a {
-     background-image: url(../images/hero_actor.webp);
-     object-fit: cover;
-}
-
-
-
 
 
 
 .hero {
      height: 80vh;
-     background-image: url(../images/hero_actor.webp);
      background-size: cover;
      background-repeat: no-repeat;
 
      display: flex;
      flex-direction: column;
      justify-content: flex-end;
-  
+
+     transition: background-image 0.5s ease-in-out;
    }
+
+
+
+
+
    
    .hero-nav {
      background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 100%);     
@@ -159,8 +152,10 @@ header > h1 {
      transition: 0.5s
    }
    
-   .hero-nav a:hover {
-     background-image: url(../images/hero_actor.webp);
+   .hero-nav .actors:hover,
+   .hero-nav .production:hover,
+   .hero-nav .photos:hover,
+   .hero-nav .branding:hover,
+   .hero-nav .weddings:hover{
      transform: scale(1.6) translateY(-1em);
    }
-   
