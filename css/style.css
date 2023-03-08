@@ -26,9 +26,6 @@ html, body {
  }
 
 
-body {
-
-}
 
 .navigation {
      background-color: cornflowerblue;
@@ -86,9 +83,7 @@ header > nav {
      text-decoration: none;
    }
    
-footer {
 
-}
 
 /******************************************
 /* ADDITIONAL STYLES
@@ -112,12 +107,10 @@ header > h1 {
 
 }
 
-
-
-
-
 .hero {
+     background-color: black;
      height: 80vh;
+     background-image: url(../images/hero_actor.webp);
      background-size: cover;
      background-repeat: no-repeat;
 
@@ -125,12 +118,19 @@ header > h1 {
      flex-direction: column;
      justify-content: flex-end;
 
-     transition: background-image 0.5s ease-in-out;
+     opacity: 1;
+
+     transition: opacity 0.5s ease;
    }
 
+/*
+.heroImageActors {background-image: url(../images/hero_actor.webp);}
+.heroImageProduction {background-image: url(../images/hero_prod.webp);}
+.heroImagePhotos {background-image: url(../images/hero_photos.webp);}
+.heroImageBranding {background-image: url(../images/hero_branding.webp);}
+.heroImageWeddings {background-image: url(../images/hero_wedding.webp);} 
 
-
-
+ */
 
    
    .hero-nav {
@@ -140,8 +140,6 @@ header > h1 {
    
    .hero-nav ul {
      font-size: 2.8vw;
-     display: flex;
-     flex-direction: row;
      list-style: none;
    }
 
@@ -157,5 +155,6 @@ header > h1 {
    .hero-nav .photos:hover,
    .hero-nav .branding:hover,
    .hero-nav .weddings:hover{
+     transition: 0.1s;
      transform: scale(1.6) translateY(-1em);
    }
