@@ -83,7 +83,24 @@ header > nav {
      text-decoration: none;
    }
    
+.about {
+     margin: 0;
+     background-color: black;
+     background-image: url(../images/building.webp);
+     background-size: 90%;
+     background-repeat: no-repeat;
+     background-position: right -12em bottom -2em;
+}
 
+p, h4{
+     margin: 0;
+     padding: 2em;
+}
+
+.about > * {
+     color: white;
+     width: 50%;
+}
 
 /******************************************
 /* ADDITIONAL STYLES
@@ -122,16 +139,6 @@ header > h1 {
 
      transition: opacity 0.5s ease;
    }
-
-/*
-.heroImageActors {background-image: url(../images/hero_actor.webp);}
-.heroImageProduction {background-image: url(../images/hero_prod.webp);}
-.heroImagePhotos {background-image: url(../images/hero_photos.webp);}
-.heroImageBranding {background-image: url(../images/hero_branding.webp);}
-.heroImageWeddings {background-image: url(../images/hero_wedding.webp);} 
-
- */
-
    
    .hero-nav {
      background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 100%);     
