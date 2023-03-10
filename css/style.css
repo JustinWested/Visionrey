@@ -23,6 +23,7 @@
 html, body {
      max-width: 100%;
      overflow-x: hidden;
+     background-color: black;
  }
 
 
@@ -37,7 +38,7 @@ html, body {
 /*******************************************/
 header {
      display: grid;
-     grid-template-columns: auto 1fr;
+     grid-template-columns: 40% 1fr;
      background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 100%);     
      padding-bottom: 10em;
      position: absolute;
@@ -48,14 +49,12 @@ header {
 header > nav {
      padding-top: 1em;
 }
-   
    .logo {
-     max-width: 100%;
+     min-width: 90%;
    }
-   
-   .logo img {
-     display: block;
-     max-width: 65%;
+   .logo > img{
+     position: absolute;
+     width: 20vw;
      height: auto;
    }
    
@@ -69,6 +68,7 @@ header > nav {
      margin: 0;
      padding: 0;
      list-style: none;
+     font-size: 1em;
    }
    
    nav ul li {
@@ -85,22 +85,32 @@ header > nav {
    
 .about {
      margin: 0;
+     padding: 0;
+     height: 60vh;
      background-color: black;
      background-image: url(../images/building.webp);
-     background-size: 90%;
+     background-size: auto;
      background-repeat: no-repeat;
-     background-position: right -12em bottom -2em;
+     background-position: center;
+     background-position-x: right -5em;
+     width: 100%;
 }
 
-p, h4{
+.gradient {
+     background: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,1) 45%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0));;
+     height: 80vh;
      margin: 0;
-     padding: 2em;
+     padding-left: 2em;
 }
 
-.about > * {
+
+.about p, h4{
+     padding-top: 2em;
      color: white;
-     width: 50%;
+     margin: 0;
+     width: 40%;
 }
+
 
 /******************************************
 /* ADDITIONAL STYLES
@@ -111,25 +121,13 @@ header > h1 {
 }
 
 
-.navigation {
-     transition: 0.2s;
-     height: 30em;
-}
-
-.navigation .navArea ul li a {
-     padding: 1em;
-     font-size: 3vw;
-     font-weight: 600;
-
-
-}
-
 .hero {
      background-color: black;
-     height: 80vh;
+     height: 100vh;
      background-image: url(../images/hero_actor.webp);
      background-size: cover;
      background-repeat: no-repeat;
+     background-position: center;
 
      display: flex;
      flex-direction: column;
@@ -139,6 +137,17 @@ header > h1 {
 
      transition: opacity 0.5s ease;
    }
+
+                         @media only screen and (max-device-width: 600px) {
+
+                              .hero{
+                                   height: 40vh;
+                              }
+
+                              .hero-nav > ul {
+                                   display: none;
+                              }
+                         }
    
    .hero-nav {
      background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 100%);     
