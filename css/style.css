@@ -88,13 +88,15 @@ header > nav {
      padding: 0;
      height: 60vh;
      background-color: black;
-     background-image: url(../images/building.webp);
+     background-image: url(../images/buildinggrad.webp);
      background-size: auto;
      background-repeat: no-repeat;
      background-position: center;
-     background-position-x: right -5em;
+     background-position-x: right -15em;
      width: 100%;
 }
+
+
 
 .gradient {
      background: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,1) 45%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0));;
@@ -109,6 +111,11 @@ header > nav {
      color: white;
      margin: 0;
      width: 40%;
+}
+
+.logos {
+     background-color: white;
+     height: 7em;
 }
 
 
