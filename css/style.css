@@ -86,7 +86,7 @@ header > nav {
 .about {
      margin: 0;
      padding: 0;
-     height: 60vh;
+     height: 70vh;
      background-color: black;
      background-image: url(../images/buildinggrad.webp);
      background-size: auto;
@@ -96,6 +96,12 @@ header > nav {
      width: 100%;
 }
 
+@media (max-width: 900px) {
+     .about {
+       background-position-x: right -25em;
+     }
+   }
+
 
 
 .gradient {
@@ -103,6 +109,7 @@ header > nav {
      height: 80vh;
      margin: 0;
      padding-left: 2em;
+
 }
 
 
@@ -113,15 +120,107 @@ header > nav {
      width: 40%;
 }
 
+.about aside p{
+     font-style: italic;
+     font-size: x-large;
+     margin-bottom: 0;
+     padding-bottom: 0%;
+}
+
+.highlight {
+     border-radius: 2em 6em 1em 5em;
+  background-image: linear-gradient(
+    -100deg,
+    rgba(255, 21, 0, 0.702),
+    rgba(255, 20, 0, 0.7) 95%,
+    rgba(255, 21, 0, 0.659)
+  );
+}
+
+.about aside p span{
+     z-index: 3;
+}
+
+.about h4 {
+     font-weight:bolder;
+     font-size: x-large;
+     margin: .5em;
+     padding-top: 0%;
+     text-align: right;
+     
+}
+
+.about * {
+     overflow: hidden;
+}
+
+section p {
+     font-size: clamp(.75rem, 1.4vw, 1.2rem);
+   
+}
+
+
 .logos {
      background-color: white;
      height: 7em;
+     margin: 0;
+     padding: 0;
+     background-image: url(../images/logobanner.webp);
+     background-size: contain;
+     background-repeat: no-repeat;
+     background-position: center;
 }
 
+.posters {
+     margin: 0;
+     padding: 0;
+     height: 80vh;
+     background-color: rgb(255, 255, 255);
+     background-image: url(../images/POSTERS.webp);
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+     width: 100%;
+}
+
+.poster-container > h2, 
+.poster-container > p {
+     margin: 0;
+     padding: 0 4em;
+     background-color: #ffffffb3;
+     width: 100%;
+}
+
+.poster-container > h2 {
+     padding-top: 1em;
+     color: rgba(255, 20, 0, 0.7);
+     text-shadow: 2px 2px 0 #000;
+     font-weight: 900;
+     font-size: 3em;
+
+}
+
+.poster-container > p {
+     padding-top: 1em;
+     padding-bottom: 2em;
+}
+
+.poster-container {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     text-align: center;
+     height: 80vh; /* Set a height to make vertical centering work */
+}
+   
 
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+
+
+
 
 header > h1 {
      display: none;
