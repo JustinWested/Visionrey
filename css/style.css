@@ -24,6 +24,7 @@ html, body {
      max-width: 100%;
      overflow-x: hidden;
      background-color: black;
+     font-family: 'Kanit', sans-serif;
  }
 
 
@@ -31,6 +32,7 @@ html, body {
 .navigation {
      background-color: cornflowerblue;
 }
+
 
 
 /******************************************
@@ -192,17 +194,21 @@ section p {
 }
 
 .poster-container > h2 {
+     background-image: url(../images/whois.webp);
+     background-size:contain;
+     background-repeat: no-repeat;
+     background-position: center;
      padding-top: 1em;
-     color: rgba(255, 20, 0, 0.7);
-     text-shadow: 2px 2px 0 #000;
+     color: rgba(164, 18, 5, 0);
      font-weight: 900;
      font-size: 3em;
 
 }
 
 .poster-container > p {
-     padding-top: 1em;
      padding-bottom: 2em;
+     font-size: 1.5em;
+     font-weight: 900;
 }
 
 .poster-container {
@@ -214,6 +220,24 @@ section p {
      height: 80vh; /* Set a height to make vertical centering work */
 }
    
+
+.testimony-contact{
+     background-color: white;
+     display: flex;
+     align-items: center;
+}
+
+.testimony {
+     width: 50%;
+     color: #ffffff00;
+     height: 100%;
+     background-image: url(../images/testimonial1.webp);
+}
+
+.contact-text {
+     width: 50%;
+}
+
 
 /******************************************
 /* ADDITIONAL STYLES
