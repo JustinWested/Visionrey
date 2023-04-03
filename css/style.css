@@ -91,18 +91,13 @@ header > nav {
      height: 70vh;
      background-color: black;
      background-image: url(../images/buildinggrad.webp);
-     background-size: auto;
+     background-size:cover;
      background-repeat: no-repeat;
      background-position: center;
-     background-position-x: right -15em;
+     background-position-x: right -12em;
      width: 100%;
 }
 
-@media (max-width: 900px) {
-     .about {
-       background-position-x: right -25em;
-     }
-   }
 
 
 
@@ -208,7 +203,7 @@ section p {
 .poster-container > p {
      padding-bottom: 2em;
      font-size: 1.5em;
-     font-weight: 900;
+     font-weight: 600;
 }
 
 .poster-container {
@@ -232,6 +227,10 @@ section p {
      color: #ffffff00;
      height: 100%;
      background-image: url(../images/testimonial1.webp);
+     background-size:auto;
+     background-repeat: no-repeat;
+     background-position: center;
+     border: solid 2em black;
 }
 
 .contact-text {
