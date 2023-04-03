@@ -52,40 +52,43 @@ header {
 
 header > nav {
      padding-top: 1em;
+     visibility: hidden;
 }
-   .logo {
+
+.logo {
      min-width: 90%;
-   }
-   .logo > img{
+}
+   
+.logo > img{
      position: absolute;
      width: 20vw;
      height: auto;
-   }
+}
    
-   nav {
+nav {
      text-align: right;
      white-space: nowrap;
-   }
+}
    
-   nav ul {
+nav ul {
      display: inline-block;
      margin: 0;
      padding: 0;
      list-style: none;
      font-size: 1em;
-   }
+}
    
-   nav ul li {
+nav ul li {
      display: inline-block;
      margin: 0 0.5em;
-   }
+}
    
-   nav ul li a {
+nav ul li a {
      display: block;
      padding: 0.5em;
      color: #ffffff;
      text-decoration: none;
-   }
+}
    
 .about {
      margin: 0;
@@ -154,7 +157,7 @@ header > nav {
 }
 
 section p {
-     font-size: clamp(.75rem, 1.4vw, 1.2rem);
+     font-size: clamp(.75rem, 1.4vw, 1rem);
    
 }
 
@@ -287,6 +290,8 @@ section p {
      color: white;
      padding: .5em 0;
      width: 20% !important;
+     border: 2px solid rgb(198, 14, 14);
+     border-radius: 6px;
 }
 
 
@@ -371,15 +376,18 @@ footer {
      padding-top: 3em;
 }
 
-.social-footer-left > nav {
+.social-footer-left {
      width: 30%;
+}
+
+.social-footer-left > nav {
      text-align: center;
      padding-left: 1em;
-     font-size: 1.5em;
+     font-size: clamp(.75rem, 2vw, 1.5rem);
 }
 
 .social-footer-left > figure {
-     margin: 0 0 0 1em;
+     margin: 0 0 0 1.5em;
      background-image: url(../images/logo.webp);
      background-size:contain;
      background-repeat: no-repeat;
@@ -389,18 +397,22 @@ footer {
 }
 
 .mailing {
-     width: 40%;
+     width: 50%;
      color: white;
      align-items: center;
      justify-content: center;
      padding-top: 1em;
-     padding-left: 3em;
+     padding-left: 5em;
+}
+
+.mailing input[type=text]{
+     width: 50%;
 }
 
 
 .footnav {
      color: white;
-     width: 30%;
+     width: 20%;
      height: 20vh;
 }
 
