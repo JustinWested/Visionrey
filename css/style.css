@@ -23,7 +23,7 @@
 html, body {
      max-width: 100%;
      overflow-x: hidden;
-     background-color: black;
+     background-color: rgb(0, 0, 0);
      font-family: 'Kanit', sans-serif;
  }
 
@@ -43,7 +43,7 @@ body {
 header {
      display: grid;
      grid-template-columns: 40% 1fr;
-     background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 100%);     
+     background: linear-gradient(to bottom, rgba(38,38,38,1) 0%, rgba(38,38,38,1) 10%, rgba(38,38,38,0) 100%);     
      padding-bottom: 10em;
      position: absolute;
      width: 100%;
@@ -163,7 +163,7 @@ section p {
 
 
 .logos {
-     background-color: white;
+     background-color: rgb(0, 0, 0);
      height: 7em;
      margin: 0;
      padding: 0;
@@ -387,7 +387,7 @@ footer {
 }
 
 .social-footer-left > figure {
-     margin: 0 0 0 1.5em;
+     margin: 0 0 0 10px;
      background-image: url(../images/logo.webp);
      background-size:contain;
      background-repeat: no-repeat;
