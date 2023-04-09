@@ -43,7 +43,7 @@ body {
 header {
      display: grid;
      grid-template-columns: 40% 1fr;
-     background: linear-gradient(to bottom, rgba(38,38,38,1) 0%, rgba(38,38,38,1) 10%, rgba(38,38,38,0) 100%);     
+     background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 100%);     
      padding-bottom: 10em;
      position: absolute;
      width: 100%;
@@ -91,15 +91,13 @@ nav ul li a {
 }
    
 .about {
+     grid-template-columns: 50% 50%;
+     display: grid;
+
      margin: 0;
      padding: 0;
      height: 70vh;
      background-color: black;
-     background-image: url(../images/buildinggrad.webp);
-     background-size:cover;
-     background-repeat: no-repeat;
-     background-position: center;
-     background-position-x: right -12em;
      width: 100%;
 }
 
@@ -107,11 +105,24 @@ nav ul li a {
 
 
 .gradient {
+     display: grid;
+     grid-column: 1/2;
+
+
      background: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,1) 45%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0));;
      height: 80vh;
      margin: 0;
      padding-left: 2em;
+}
 
+.hero-img {
+     display: grid;
+     grid-column: 2/3;
+
+     background-image: url(../images/headshot.webp);
+     background-size: contain;
+     background-repeat: no-repeat;
+     background-position: center;
 }
 
 
