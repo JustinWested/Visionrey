@@ -547,6 +547,8 @@ footer {
 .contact-main {
      display: grid;
      grid-template-columns: 25% 25% 25% 25%;
+     grid-template-rows: auto;
+     margin-top: 40px;
 
 }
 
@@ -580,14 +582,17 @@ footer {
      color: white;
      display: inline-grid;
      grid-column: 2/4;
-     align-items: center;
-     align-self: center;
-     justify-self: center;
-
+     justify-items: center;
 
      text-align: left;
 
      margin-top: 60px;
+}
+
+.contact-form form {
+     display: grid;
+     width: 100%;
+     justify-items: center;
 }
 
 .contact-form label,
@@ -595,6 +600,57 @@ footer {
 .contact-form select {
      font-size: 1.5em;
      font-weight: 200;
-     width: 80%;
+     width: 100%;
      margin: 10px;
 }
+
+input:focus {
+     border: 3px solid red;
+   }
+
+.contact-form > form > .button {
+     justify-self: left;
+     margin-left: 0px;
+     width: 50%;
+}
+
+.detail {
+     padding-bottom: 200px;
+}
+
+.contact-info {
+     display: grid;
+     grid-column: 1/2;
+     grid-row: 2/3;
+
+     width: auto;
+     justify-items: center;
+     height: 30%;
+
+
+     position: sticky;
+     top: 80px;
+
+     margin: 0 50px;
+     background-color: #b90b0b8b;
+     color: white;
+     font-size: 1em;
+     font-weight: 300;
+}
+
+.contact-info i {
+     font-size: 1.5em;
+}
+
+h6 {
+     font-size: 1.5em;
+     font-weight: 300;
+     
+     margin: 0;
+     padding: 0;
+}
+
+.contact-info li {
+     padding: 10px 0;
+}
+
