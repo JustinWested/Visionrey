@@ -564,5 +564,37 @@ footer {
 
 .cont-text-cont-main li {
      list-style-type: none;
+     font-weight: 200;
+     font-size: 1.3em;
      background-color: rgba(105, 105, 105, 0.256);
+}
+
+.cont-text-cont-main ul {
+          padding-left: 0;
+
+}
+
+
+.contact-form {
+     background-color: black;
+     color: white;
+     display: inline-grid;
+     grid-column: 2/4;
+     align-items: center;
+     align-self: center;
+     justify-self: center;
+
+
+     text-align: left;
+
+     margin-top: 60px;
+}
+
+.contact-form label,
+.contact-form input,
+.contact-form select {
+     font-size: 1.5em;
+     font-weight: 200;
+     width: 80%;
+     margin: 10px;
 }
