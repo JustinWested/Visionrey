@@ -198,7 +198,7 @@ section p {
      background-size: contain;
      background-repeat: no-repeat;
      background-position: center;
-     margin: 15px 15px;
+     margin: 7px 12px;
 }
 .netflix{
      width: 20%;
@@ -397,7 +397,6 @@ hr {
      width: 50%;
      font-size: 1.5em;
      font-weight: 600;
-
 }
 
 
@@ -538,4 +537,32 @@ footer {
 
 .footnav li:first-child {
      color: red;
+}
+
+
+/******************************************
+/* CONTACT US PAGE
+/*******************************************/
+
+.contact-main {
+     display: grid;
+     grid-template-columns: 25% 25% 25% 25%;
+
+}
+
+
+.cont-text-cont-main {
+     display: grid;
+     grid-column: 2/4;
+     width: 100%;
+     
+
+     text-align: center;
+     margin: 0;
+     padding: 0;
+}
+
+.cont-text-cont-main li {
+     list-style-type: none;
+     background-color: rgba(105, 105, 105, 0.256);
 }
