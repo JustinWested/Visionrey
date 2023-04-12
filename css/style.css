@@ -145,9 +145,9 @@ nav ul li a {
      border-radius: 2em 6em 1em 5em;
   background-image: linear-gradient(
     -100deg,
-    rgba(255, 21, 0, 0.702),
-    rgba(255, 20, 0, 0.7) 95%,
-    rgba(255, 21, 0, 0.659)
+    rgba(220, 20, 60, 0.756),
+    rgba(255, 20, 60, 0.7) 95%,
+    rgba(255, 21, 60, 0.659)
   );
 }
 
@@ -344,7 +344,7 @@ hr {
 }
 
 .contact-text > h3 {
-     color: rgb(185, 34, 20);
+     color: crimson;
      font-weight: 600;
      font-size: 2em;
      margin: 0;
@@ -383,11 +383,11 @@ hr {
 }
 
 .button {
-     background-color: red;
+     background-color: crimson;
      color: white;
      padding: .5em 0;
      width: 20%;
-     border: 2px solid rgb(198, 14, 14);
+     border: 2px solid crimson
      border-radius: 4px;
 }
 
@@ -536,7 +536,7 @@ footer {
 }
 
 .footnav li:first-child {
-     color: red;
+     color: crimson;
 }
 
 .button{
@@ -547,7 +547,7 @@ footer {
 .button:hover {
      box-shadow: 0 12px 16px 0 rgba(255, 255, 255, 0.24), 0 17px 50px 0 rgba(255, 255, 255, 0.19);
      background-color: rgb(255, 255, 255);
-     color: rgb(255, 0, 0);
+     color: crimson;
 }
 
 /******************************************
@@ -671,52 +671,6 @@ h6 {
 /* PHOTOGRAPHY PAGE
 /*******************************************/
 
-/* #photo-main {
-     color: white;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-}
-
-.headshots {
-     ;
-     width: 80%;
-}
-
-.carousel {
-     position: relative;
-     width: 100%;
-     overflow: hidden;
-     
-   }
-   .carousel-inner {
-     display: flex;
-     width: 100%;
-     transition: transform 0.3s ease-in-out;
-   }
-   .carousel-inner img {
-     margin: 10px;
-     width: 33.3333%;
-     height: auto;
-   }
-   .carousel-prev, .carousel-next {
-     position: absolute;
-     top: 50%;
-     transform: translateY(-50%);
-     padding: 8px;
-     border: none;
-     background-color: rgba(0, 0, 0, 0.43);
-     color: white;
-     font-size: 24px;
-     cursor: pointer;
-   }
-   .carousel-prev {
-     left: 0;
-   }
-   .carousel-next {
-     right: 0;
-   }
-    */
 
 #photo-main {
      color: white;
@@ -744,6 +698,7 @@ h6 {
      margin: 40px 0;
 }         
 
+.video-container h1::before
 .gallery-container h1:before{
      content: "";
      position: absolute;
@@ -850,3 +805,124 @@ label:hover {
      position: absolute;
      transition: 0s;
 }
+
+
+
+/******************************************
+/* VIDEOGRAPHY PAGE
+/*******************************************/
+
+.video-container {
+     display: grid;
+     grid-template-columns: 25% 25% 25% 25%;
+     color: white;
+     width: 100%;
+     font-weight: normal;
+     margin-bottom: 60px;
+}
+
+.vid-foot {
+     margin-top: 50px;
+}
+
+.video-container h1{
+     color: crimson;
+}
+
+.video-text span {
+     width: fit-content;
+}
+
+.video-text {
+     display: grid;
+     grid-column: 2/4;
+     margin: 50px;
+}
+
+.hero-vid {
+     display: grid;
+     grid-column: 1/5;
+     height: 70vh;
+     position: relative;
+
+     background-image: url(/images/minterview.png);
+     background-size: cover;
+}
+
+.vid-one {
+     display: grid;
+     grid-column: 1/3;
+     height: 45vh;
+     position: relative;
+
+     background-image: url(/images/mposter.png);
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+}
+
+.vid-two {
+     display: grid;
+     grid-column: 3/5;
+     height: 45vh;
+     position: relative;
+
+     background-image: url(/images/filam.jpg);
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+}
+
+.vid-three {
+     display: grid;
+     grid-column: 1/3;
+     height: 45vh;
+     position: relative;
+
+     background-image: url(/images/norm.jpg);
+     background-size:cover;
+     background-repeat: no-repeat;
+     background-position: center;
+}
+
+.vid-four {
+     display: grid;
+     grid-column: 3/5;
+     height: 45vh;
+     position: relative;
+
+}
+
+.video-container figure {
+     z-index: 2;
+     font-size: 2.2em;
+     font-weight: normal;
+}
+
+.hero-vid:after,
+.vid-two:after,
+.vid-three:after {
+     content:'';
+     position: absolute;
+     left: 0;
+     top: 0;
+     width:100%;
+     height:100%;
+     background: rgba(255, 0, 0, 0.35);
+   }
+
+.vid-one:after,
+.vid-four:after {
+     content:'';
+     position: absolute;
+     left: 0;
+     top: 0;
+     width:100%;
+     height:100%;
+     background: rgba(0, 0, 0, 0.35);
+   }
+
+
+/******************************************
+/* CONSULT PAGE
+/*******************************************/
