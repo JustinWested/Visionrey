@@ -22,3 +22,28 @@ weddingsButton.addEventListener('mouseover', () => {
 });
 
 
+
+
+
+
+const carouselInner = document.querySelector(".carousel-inner");
+const prevButton = document.querySelector(".carousel-prev");
+const nextButton = document.querySelector(".carousel-next");
+
+let slideIndex = 0;
+
+prevButton.addEventListener("click", () => {
+  slideIndex--;
+  if (slideIndex < 0) {
+    slideIndex = 2;
+  }
+  carouselInner.style.transform = `translateX(-${slideIndex * 33.3333}%)`;
+});
+
+nextButton.addEventListener("click", () => {
+  slideIndex++;
+  if (slideIndex > 2) {
+    slideIndex = 0;
+  }
+  carouselInner.style.transform = `translateX(-${slideIndex * 33.3333}%)`;
+});
