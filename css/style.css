@@ -96,12 +96,11 @@ nav ul li a {
      grid-template-columns: 50% 50%;
      grid-template-rows: auto 1fr;
 
-     margin: 0;
+     margin: 0 15%;
      padding: 0;
      height: auto;
      background-color: black;
 }
-
 
 
 
@@ -111,7 +110,6 @@ nav ul li a {
 
      height: 80vh;
      margin: 0;
-     padding-left: 2em;
 }
 
 .hero-img {
@@ -230,6 +228,7 @@ section p {
      height: 80vh;
      background-color: rgb(255, 255, 255);
      background-image: url(../images/POSTERS.webp);
+     background-attachment: fixed;
      background-size: cover;
      background-repeat: no-repeat;
      background-position: center;
@@ -241,7 +240,7 @@ section p {
      margin: 0;
      padding: 0 4em;
      background-color: #000000b3;
-     width: 100%;
+     width: 70%;
      color: #ffffff;
 }
 
@@ -269,6 +268,7 @@ section p {
      justify-content: center;
      flex-direction: column;
      text-align: center;
+     background-color: rgba(0, 0, 0, 0.59);
      height: 80vh; /* Set a height to make vertical centering work */
 }
    
@@ -1009,7 +1009,7 @@ label:hover {
 .consult-form-container {
      display: grid;
      grid-template-columns: 25% 25% 25% 25%;
-     background-color: rgb(220, 20, 60);
+     background-color: rgb(179, 33, 33);
      padding-bottom: 70px;
 }
 
@@ -1032,8 +1032,8 @@ label:hover {
 .price-example {
      content: "";
      gap: 20px;
-     height: 600px;
-     width: 350px;
+     height: 900px;
+     width: 650px;
 }
 
 .consult-one {
