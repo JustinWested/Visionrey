@@ -47,3 +47,6 @@ nextButton.addEventListener("click", () => {
   }
   carouselInner.style.transform = `translateX(-${slideIndex * 33.3333}%)`;
 });
+
+
+
