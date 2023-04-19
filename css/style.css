@@ -584,10 +584,11 @@ footer {
 /*******************************************/
 
 .learn-container {
- padding: 60px;
- margin: 0 20%;
+ padding: 20px 40px;
+ margin: 40px 20%;
  height: 100%;
  background-color: rgb(20, 20, 20);
+ border-radius: 5px
 }
 
 .learn-container p{
@@ -873,16 +874,27 @@ label:hover {
 
 .video-container h1{
      color: crimson;
+     font-size: clamp(2rem, 8vw, 8rem);     
+
+     margin: 0;
 }
 
 .video-text span {
      width: fit-content;
+     font-size: clamp(.80rem, 2vw, 3rem);   
+     margin-left: 20%;
+}
+
+.video-text p {
+     font-size: clamp(.75rem, 1.4vw, 2.3rem);     
+
 }
 
 .video-text {
      display: grid;
      grid-column: 2/4;
-     margin: 50px;
+     margin: 50px 0;
+     padding: 0;
 }
 
 .hero-vid {
