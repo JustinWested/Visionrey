@@ -23,30 +23,77 @@ weddingsButton.addEventListener('mouseover', () => {
 
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  const headshots = document.querySelectorAll(".headshot");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
 
-
-
-const carouselInner = document.querySelector(".carousel-inner");
-const prevButton = document.querySelector(".carousel-prev");
-const nextButton = document.querySelector(".carousel-next");
-
-let slideIndex = 0;
-
-prevButton.addEventListener("click", () => {
-  slideIndex--;
-  if (slideIndex < 0) {
-    slideIndex = 2;
+  function addLightboxListener(imageElement) {
+    imageElement.addEventListener("click", () => {
+      lightboxImg.src = imageElement.src;
+      lightboxImg.alt = imageElement.alt;
+      lightbox.classList.remove("hidden");
+    });
   }
-  carouselInner.style.transform = `translateX(-${slideIndex * 33.3333}%)`;
+
+  lightbox.addEventListener("click", () => {
+    lightbox.classList.add("hidden");
+  });
+
+  headshots.forEach(headshot => {
+    addLightboxListener(headshot);
+  });
+
+  document.querySelectorAll(".lightbox-image").forEach(lightboxImage => {
+    addLightboxListener(lightboxImage);
+  });
 });
 
-nextButton.addEventListener("click", () => {
-  slideIndex++;
-  if (slideIndex > 2) {
-    slideIndex = 0;
-  }
-  carouselInner.style.transform = `translateX(-${slideIndex * 33.3333}%)`;
+
+document.addEventListener("DOMContentLoaded", function() {
+  const moreDetails = document.querySelectorAll(".more-details");
+
+  moreDetails.forEach((element) => {
+    element.addEventListener("click", function() {
+      const weddingDescription = document.querySelector(".wedding-height");
+      weddingDescription.classList.toggle("show");
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const moreDetails = document.querySelectorAll(".more-details");
+
+  moreDetails.forEach((element) => {
+    element.addEventListener("click", function() {
+      const weddingDescription = document.querySelector(".wedding-description");
+      weddingDescription.classList.toggle("unhide");
+    });
+  });
 });
 
 
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const moreDetails = document.querySelectorAll(".more-details-two");
+
+  moreDetails.forEach((element) => {
+    element.addEventListener("click", function() {
+      const weddingDescription = document.querySelector(".wedding-height-two");
+      weddingDescription.classList.toggle("show");
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const moreDetails = document.querySelectorAll(".more-details-two");
+
+  moreDetails.forEach((element) => {
+    element.addEventListener("click", function() {
+      const weddingDescription = document.querySelector(".wedding-description-two");
+      weddingDescription.classList.toggle("unhide");
+    });
+  });
+});
 
