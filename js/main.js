@@ -6,10 +6,12 @@ const photosButton = document.querySelector('.photos');
 const weddingsButton = document.querySelector('.weddings');
 
 actorsButton.addEventListener('mouseover', () => {
+  console.log('actorsButton hover');
   heroImage.style.backgroundImage = 'url(../images/hero_actor.webp)';
 });
 
 productionButton.addEventListener('mouseover', () => {
+  console.log('productionButton hover');
   heroImage.style.backgroundImage = 'url(../images/hero_prod.webp)';
 });
 
@@ -20,6 +22,9 @@ photosButton.addEventListener('mouseover', () => {
 weddingsButton.addEventListener('mouseover', () => {
   heroImage.style.backgroundImage = 'url(../images/hero_wedding.webp)';
 });
+
+
+
 
 document.addEventListener("DOMContentLoaded", function() {
   const hamburger = document.querySelector("#hamburger");
