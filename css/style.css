@@ -1512,9 +1512,6 @@ header {
 body > * {
      overflow-y: hidden;
 }
-header > a {
-     display: none;
-}
 
 header > nav {
      padding: 0;
@@ -1584,9 +1581,6 @@ header > nav {
      font-size: 30px;
 }
 
-.logo {
-     display: none;
-}
 
 
 .about {
