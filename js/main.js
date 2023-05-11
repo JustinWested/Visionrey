@@ -21,6 +21,23 @@ weddingsButton.addEventListener('mouseover', () => {
   heroImage.style.backgroundImage = 'url(../images/hero_wedding.webp)';
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+  const hamburger = document.querySelector("#hamburger");
+  const mobileNav = document.querySelector(".mobile-nav");
+
+  hamburger.addEventListener("click", function() {
+    mobileNav.classList.toggle("show");
+  });
+
+  mobileNav.addEventListener("click", function(e) {
+    if (e.target === mobileNav) {
+      mobileNav.classList.toggle("show");
+    }
+  });
+});
+
+
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -96,4 +113,5 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
+
 

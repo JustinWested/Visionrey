@@ -42,8 +42,6 @@ body {
 /* LAYOUT
 /*******************************************/
 header {
-     display: grid;
-     grid-template-columns: 40% 1fr;
      background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 100%);     
      padding-bottom: 10em;
      position: absolute;
@@ -53,7 +51,7 @@ header {
 
 header > nav {
      padding-top: 1em;
-     visibility: hidden;
+     overflow-y: hidden;
 }
 
 .logo {
@@ -983,28 +981,11 @@ hr {
 
    .gallery {
      display: grid;
-     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
      grid-gap: 4px;
      width: 100%;
    }
 
-   .headshot-wrapper {
-     width: 100%;
-     height: 0;
-     padding-bottom: 100%;
-     position: relative;
-     overflow: hidden;
-     cursor: pointer;
-   }
-
-   .headshot-wrapper img {
-     position: absolute;
-     top: 0;
-     left: 50%;
-     transform: translateX(-50%);
-     width: 100%;
-     height: auto;
-   }
 
    .lightbox {
      position: fixed;
@@ -1026,7 +1007,8 @@ hr {
    }
    
    .hidden {
-     display: none;
+     display: none !important;
+     z-index: 30 !important;
    }
 
    .wedding-gallery {
@@ -1058,7 +1040,7 @@ hr {
    .wedding-info {
      position: relative;
      width: 100%;
-     z-index: 10;
+     z-index: 8;
      color: #fff;
      display: block;
      text-align:center;
@@ -1098,6 +1080,10 @@ hr {
      visibility: hidden;
      z-index: -5;
      transition: opacity .8s, visibility .8s;
+   }
+
+   .wedding-description-two {
+     z-index: -5;
    }
 
    .wedding-description .headshot{
@@ -1484,3 +1470,409 @@ hr {
      margin-bottom: 80px ;
 }
 
+.posters p {
+     display: inline-block;
+     padding-bottom: 1.2rem;
+}
+
+header {
+     overflow-y: hidden;
+}
+
+.mobile-nav > ul{
+     display: none;
+}
+
+#hamburger {
+     display: none;
+     margin: 15px;
+     font-size: 25px;
+     position: fixed;
+     right: 0;
+}
+
+.mobile-nav {
+     display: none;
+}
+
+.show {
+     display: block !important;
+}
+
+.wedding-info {
+     border: 2px ridge white;
+}
+
+/******************************************
+/* MOBILE STYLES
+/*******************************************/
+
+@media (max-width: 770px){
+
+body > * {
+     overflow-y: hidden;
+}
+header > a {
+     display: none;
+}
+
+header > nav {
+     padding: 0;
+}
+
+#hamburger {
+     display: block;
+}
+
+.mobile-nav {
+     margin: 0 0 0 auto;
+     position: fixed;
+     display: none;
+     right: 0;
+     width: 100%;
+     height: 100vh;
+     min-height: 100%;
+     margin: 0 0 0 auto;
+     background-color: rgba(0, 0, 0, 0.668);
+
+     z-index: 5;
+     transition: all .5s;
+}
+
+
+
+.mobile-nav > ul {
+     margin: 0 0 0 auto;
+     width: 70%;
+     height: 70%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;     
+     background-color: black;
+     border-left: 6px ridge crimson;
+     gap: 20px;
+     z-index: 10;
+}
+
+.mobile-nav ul li a {
+     color: white;
+     padding: 0;
+     font-size: 1rem;
+     text-decoration: underline 2px crimson;
+}
+
+.mobile-nav-logo {
+     width: 150px;
+     text-align: center;
+     margin-bottom: 150px;
+}
+
+.mobile-socialnav-icons {
+     height: 30%;
+     width: 70%;
+     padding-top: 50px;
+     background-color: black;
+     display: block;
+     text-align: center;
+     margin: 0 0 0 auto;
+     border-left: 6px ridge crimson;
+
+}
+
+.mobile-socialnav-icons i {
+     font-size: 30px;
+}
+
+.logo {
+     display: none;
+}
+
+
+.about {
+     display: flex;
+     flex-direction: column;
+     height: fit-content;
+}
+
+.about aside p {
+     font-size: 1rem;
+     font-weight: 400;
+}
+
+.about aside h4{
+     margin-top: 40px;
+     font-size: 1.2rem;
+     font-weight: 200;
+}
+
+.learn-more-button {
+     margin-top: 90px;
+}
+
+.learn-more-button a {
+     font-size: 1.3rem;
+}
+
+.head-vid {
+     height: 350px;
+}
+
+.logo-row > * {
+     width: 100%;
+}
+
+.logo-row {
+     margin: 0 ;
+     padding: 0 15px;
+     gap: 15px;
+}
+
+.poster-container {
+     width: 100%;
+     margin: auto 0;
+     height: 400px;
+}
+
+.poster-container > * {
+     padding: 5px 0!important;
+     width: 100% !important;
+}
+
+.poster-container h2 {
+     display: inline-block;
+     padding: 0 auto;
+}
+
+.poster-container p {
+     font-size: .9rem;
+}
+
+.posters {
+     height: 400px;
+     background-attachment: unset;
+}
+
+.testimony-contact {
+     display: flex;
+     flex-direction: column;
+}
+
+.testimony {
+     width: 100%;
+     margin: 10px 0;
+}
+
+.contact-text {
+     width: 90%;
+     margin: 0 auto;
+}
+
+
+.learn-header {
+     font-size: 3rem;
+}
+
+.learn-container {
+     width: 95%;
+     margin: 20px auto;
+     padding: 15px;
+}
+
+.learn-container p {
+     width: 100%;
+}
+
+
+.contact-info {
+     display: none;
+}
+
+.contact-main {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-content: center;
+}
+
+.wedding-header h1 {
+     margin-top: 80px;
+     font-size: 2.5rem;
+}
+
+.wedding-hero {
+     display: flex;
+     flex-direction: column;
+     height: fit-content;
+}
+
+.wedding-hero figure {
+     display: flex;
+     height: 400px;
+     min-height: 400px;
+     width: 300px;
+     margin: 16 auto;
+}
+
+.wedding-hero-text p {
+     display: block;
+}
+
+
+.video-container {
+     display: flex;
+     flex-direction: column;
+     margin-bottom: 30px;
+}
+
+.video-text {
+     width: 90%;
+     margin: 30px auto;
+}
+
+.video-text .highlight {
+     border: 4px solid crimson;
+     background-color: white;
+     color: crimson;
+     background-image: none;
+}
+
+.consult-header p {
+     margin: 24px 0;
+     font-size: 1.3rem;
+     font-weight: 200;
+}
+
+.consult-header h3 {
+     margin: 24px 0;
+     font-size: 2rem;
+}
+
+.testimony-consult-block {
+     display: flex;
+     flex-direction: column;
+     margin-top: 20px;
+}
+
+.testimony-consult-block .testimony {
+     width: 90%;
+}
+
+.testimony aside {
+     width: 100%;
+}
+
+.consult-midcopy {
+     width: 90%;
+     margin: 30px auto;
+     font-size: 1.2rem;
+}
+
+.prices {
+     width: 85%;
+}
+
+.prices li {
+     font-size: 1rem;
+}
+
+.prices span {
+     font-size: 1rem;
+}
+
+.prices h2 {
+     margin: 15px 0;
+     font-size: 1.8rem;
+}
+
+.prices a {
+     font-size: 1.5rem;
+}
+
+.consult-form-container {
+     display: flex;
+     flex-direction: column;
+     padding: 0;
+}
+
+.consult-form {
+     margin: 15px auto;
+     width: 95%;
+}
+
+
+footer {
+     padding-top: 20px;
+     display: flex;
+     flex-direction: column;
+     height: fit-content;
+} 
+
+
+.video-container > section {
+     width: 100%;
+     height: 260px;
+     margin-bottom: 10px;
+}
+
+.video-container h3 {
+     font-size: 1.5rem;
+}
+
+.video-container span {
+     font-size: 1rem;
+}
+
+.masonry-gallery {
+     margin: 0 ;
+}
+
+
+.container {
+     margin-bottom: 60px;
+     height: fit-content;
+}
+
+.container .box {
+     height: 300px;
+}
+
+
+
+
+
+footer figure {
+     display: none;
+}
+
+.social-footer-left {
+     width: 100%;
+}
+
+.social-footer-left > nav {
+     font-size: 25px;
+     padding: 0;
+}
+
+.mailing {
+     text-align: center;
+     padding: 0;
+     width: 100%;
+}
+
+.footnav {
+     width: 100%;
+     height: fit-content;
+}
+
+.footnav > ul {
+     display: flex;
+     flex-direction: row;
+     font-size: .8rem;
+     font-weight: 200;
+     align-content: center;
+     justify-content: center;
+     margin: 15px auto;
+}
+
+}
