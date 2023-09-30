@@ -1,3 +1,5 @@
+/* 
+
 const heroImage = document.querySelector('.hero');
 
 const actorsButton = document.querySelector('.actors');
@@ -23,100 +25,31 @@ weddingsButton.addEventListener('mouseover', () => {
   heroImage.style.backgroundImage = 'url(../images/hero_wedding.webp)';
 });
 
-
+*/
 
 
 document.addEventListener("DOMContentLoaded", function() {
   const hamburger = document.querySelector("#hamburger");
   const mobileNav = document.querySelector(".mobile-nav");
+  const mobileNavList = document.querySelector(".mobile-nav > ul");
 
+  // Toggle visibility when the hamburger is clicked
   hamburger.addEventListener("click", function() {
     mobileNav.classList.toggle("show");
   });
 
+  // Hide the mobile navigation when you click outside of the actual navigation list
   mobileNav.addEventListener("click", function(e) {
-    if (e.target === mobileNav) {
-      mobileNav.classList.toggle("show");
+    if (e.target === mobileNav) {  // Check if you clicked on the mobileNav and not its children
+      mobileNav.classList.remove("show");
     }
   });
-});
 
-
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  const headshots = document.querySelectorAll(".headshot");
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
-
-  function addLightboxListener(imageElement) {
-    imageElement.addEventListener("click", () => {
-      lightboxImg.src = imageElement.src;
-      lightboxImg.alt = imageElement.alt;
-      lightbox.classList.remove("hidden");
-    });
-  }
-
-  lightbox.addEventListener("click", () => {
-    lightbox.classList.add("hidden");
-  });
-
-  headshots.forEach(headshot => {
-    addLightboxListener(headshot);
-  });
-
-  document.querySelectorAll(".lightbox-image").forEach(lightboxImage => {
-    addLightboxListener(lightboxImage);
+  // Prevent the mobileNav event from firing when you click on the navigation list itself
+  mobileNavList.addEventListener("click", function(e) {
+    e.stopPropagation(); // Prevents the event from bubbling up to the mobileNav
   });
 });
 
-
-document.addEventListener("DOMContentLoaded", function() {
-  const moreDetails = document.querySelectorAll(".more-details");
-
-  moreDetails.forEach((element) => {
-    element.addEventListener("click", function() {
-      const weddingDescription = document.querySelector(".wedding-height");
-      weddingDescription.classList.toggle("show");
-    });
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-  const moreDetails = document.querySelectorAll(".more-details");
-
-  moreDetails.forEach((element) => {
-    element.addEventListener("click", function() {
-      const weddingDescription = document.querySelector(".wedding-description");
-      weddingDescription.classList.toggle("unhide");
-    });
-  });
-});
-
-
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  const moreDetails = document.querySelectorAll(".more-details-two");
-
-  moreDetails.forEach((element) => {
-    element.addEventListener("click", function() {
-      const weddingDescription = document.querySelector(".wedding-height-two");
-      weddingDescription.classList.toggle("show");
-    });
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-  const moreDetails = document.querySelectorAll(".more-details-two");
-
-  moreDetails.forEach((element) => {
-    element.addEventListener("click", function() {
-      const weddingDescription = document.querySelector(".wedding-description-two");
-      weddingDescription.classList.toggle("unhide");
-    });
-  });
-});
 
 

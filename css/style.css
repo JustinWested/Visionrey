@@ -29,7 +29,8 @@ html, body {
  }
 
 body {
-     overflow-x: initial;
+     overflow-x: hidden;
+     overflow-y: hidden;
 }
 
 .navigation {
@@ -47,11 +48,16 @@ header {
      position: absolute;
      width: 100%;
      z-index: 999;
+
    }
 
 header > nav {
      padding-top: 1em;
      overflow-y: hidden;
+}
+
+input {
+     cursor: pointer;
 }
 
 .logo {
@@ -63,6 +69,47 @@ header > nav {
      width: 20vw;
      height: auto;
 }
+   
+
+
+.circle-sketch-highlight{
+     position:relative;
+     left:0.1em;
+     z-index: 2;
+   }
+   .circle-sketch-highlight:before{
+     content:"";
+     left:-0.2em;
+     top:0.2em;
+     border-width:2px;
+     border-style:solid;
+     border-color:crimson;
+     position:absolute;
+     border-right-color:transparent;
+     width:100%;
+     height:1em;
+     transform:rotate(2deg);
+     opacity:0.7;
+     border-radius:50%;
+     padding:0.1em 0.25em;
+   }
+   .circle-sketch-highlight:after{
+     content:"";
+     left:-0.5em;
+     top:0.1em;
+     padding:0.1em 0.25em;
+     border-width:2px;
+     border-style:solid;
+     border-color:crimson;
+     border-left-color:transparent;
+     border-top-color:transparent;
+     position:absolute;
+     width:100%;
+     height:1em;
+     transform:rotate(-1deg);
+     opacity:0.7;
+     border-radius:50%;
+   }
    
 nav {
      text-align: right;
@@ -145,6 +192,10 @@ nav ul li a {
   );
 }
 
+.highlight a {
+     color: white;
+     text-decoration: none;
+}
 
 section p {
      font-size: clamp(.75rem, 1.4vw, 1rem);
@@ -163,7 +214,7 @@ section p {
      color: white;
      font-size: 1.6em;
      margin-top: auto;
-     margin-bottom: 15%;
+     margin-bottom: 25%;
 
 }
 
@@ -358,10 +409,90 @@ section p {
      z-index: 2;
 }
 
+
+.success-main {
+     width: 500px;
+     min-height: 400px;
+     text-align: center;
+     align-items: center;
+     justify-items: center;
+     display: flex;
+     flex-direction: column;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+}
+
+.success-main h2 {
+     font-size: 8rem;
+     margin: 0 0 1rem 0;
+}
+
+.success-main a {
+     border: 5px solid crimson;
+     font-size: 2rem;
+     margin-top: 20px;
+     padding: 5px 30px;
+     border-radius: 15px;
+     box-shadow: 0px 10px 0px crimson;
+     transition: all ease-in-out .2s;
+     width: 100px;
+}
+
+.success-main span {
+     font-size: 1.5rem;
+     font-weight: 200;
+}
+
+.success-main a:hover {
+     box-shadow: 0px 0px 0px crimson;
+     transform: translateY(10px);
+}
+
+.success-main img {
+     width: 250px;
+     transform: translateX(25px);
+}
+
+.contact-hero {
+     height: 400px;
+     background-image: url(/images/hero_prod.webp);
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+
+.ignite-hero {
+     height: 400px;
+     background-image: url(/images/hero_photos.webp);
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+
+.learn-hero {
+     height: 350px;
+     background-image: url(/images/visionreyshowcaseredcarpet.webp);
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+
+.video-hero {
+     height: 350px;
+     background-image: url(/images/hero_actor.webp);
+     background-position: top -230px right 0px;
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+
 .contact-text {
      width: 50%;
      margin: 0 auto;
+     padding-right: 10%;
      color: #ffffff;
+     gap: 15px;
 }
 
 .contact-text > * {
@@ -386,12 +517,17 @@ section p {
      text-align: center;
 }
 
-.contact-form > input {
+select {
+     cursor: pointer;
+}
+
+.contact-form  input {
      width: 50%;
      border: 2px solid rgb(198, 14, 14);
      border-radius: 6px;
      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.550), inset 3px 3px 3px rgba(0, 0, 0, 0.550);
      margin-top: 1em;
+     cursor: text;
 }
 .contact-form > input:first-child{
      margin-top: 0;
@@ -440,22 +576,15 @@ header > h1 {
 
 .hero {
      background-color: black;
-     height: 100vh;
+     height: 60vh;
      min-height: 600px;
-     background-image: url(../images/hero_actor.webp);
-     background-attachment: fixed;
-     background-size: cover;
-     background-repeat: no-repeat;
-     background-position: center;
-     z-index: 5;
 
      display: flex;
      flex-direction: column;
      justify-content: flex-end;
 
-     opacity: 1;
 
-     transition: opacity 0.5s ease;
+
    }
 
                          @media only screen and (max-device-width: 600px) {
@@ -469,6 +598,23 @@ header > h1 {
                               }
                          }
    
+     .fallbackImage {
+          width: 100vw;
+          height: 580px;
+          position: absolute;
+          object-fit: cover;
+     }
+
+
+     .hero-vid {
+          z-index: 1;
+          position: absolute;
+          height: 580px;
+          width: 100%;
+          object-fit: cover;
+
+        }
+
    .hero-nav {
      background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 100%);     
      padding-top: 10em;
@@ -542,11 +688,15 @@ footer {
      align-items: center;
      justify-content: center;
      padding-top: 1em;
-     padding-left: 5em;
+     padding-left: 110px;
 }
 
-.mailing input[type=text]{
-     width: 50%;
+
+.mailing input[type=text],
+.mailing input[type=email]{
+     cursor: text;
+     width: 30%;
+     margin: 5px 5px 0 0;
 }
 
 
@@ -607,7 +757,7 @@ footer {
 
 .learn-container p{
      font-weight: 200;
-     font-size: clamp(1rem, 2.5vw, 2.3rem);     
+     font-size: 2rem;     
 }
 
 
@@ -1098,9 +1248,6 @@ hr {
      object-position: 0 -250px;
    }
 
-   .show {
-     grid-template-rows: 1000px !important;
-   }
 
    .unhide {
      opacity: 1;
@@ -1160,7 +1307,7 @@ hr {
      padding: 9px;
      border-radius: 15px;
      border: 3px solid rgb(255, 255, 255);
-     border-bottom: 10px solid white;
+     box-shadow: 0 7px white;
      transition: all .2s;
 }
 
@@ -1168,7 +1315,7 @@ hr {
      transform: translateY(7px);
      border-bottom: 0;
      border: 3px solid white;
-     margin-bottom: 7px;
+     box-shadow: none;
 }
 
 .hero-vid {
@@ -1479,35 +1626,115 @@ header {
      overflow-y: hidden;
 }
 
-.mobile-nav > ul{
-     display: none;
+
+
+header > nav {
+     padding: 0;
 }
+
+
+
 
 #hamburger {
-     display: none;
-     margin: 15px;
-     font-size: 25px;
+     margin: 15px 40px;
+     font-size: 35px;
      position: fixed;
      right: 0;
+     cursor: pointer;
+     z-index: 8;
 }
 
+
 .mobile-nav {
-     display: none;
+     position: fixed;
+     right: 0; 
+     top: 0;
+     width: 100%;
+     height: 100vh;
+     background-color: rgba(0, 0, 0, 0); /* Start transparent */
+     z-index: 5;
+     transition: background-color 0.3s ease-out; /* Transition for background */
+     overflow-x: hidden;
+     pointer-events: none;
+}
+
+.mobile-nav > ul {
+     margin: 0 0 0 auto;
+     width: 30%;
+     height: 100vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;     
+     background-color: black;
+     border-left: 6px ridge crimson;
+     gap: 20px;
+     z-index: 10;
+     transform: translateX(100%); /* Start offscreen */
+     transition: transform 0.3s ease-out; /* Transition for slide-in */
 }
 
 .show {
-     display: block !important;
+     background-color: rgba(0, 0, 0, 0.668); /* Darken background */
+     pointer-events: auto;
 }
 
-.wedding-info {
-     border: 2px ridge white;
+.show > ul {
+     transform: translateX(0); /* Slide ul into view */
+ }
+
+.mobile-nav ul li a {
+     color: white;
+     padding: 0;
+     font-size: 2rem;
+     transition: color 0.3s ease-in-out;
+}
+
+.mobile-nav ul li a:hover {
+     color: crimson;
+     transition: color 0.3s ease-in-out;
+}
+
+.mobile-nav-logo {
+     width: 200px;
+     text-align: center;
+
+     margin: 50px 0 150px 0;
+}
+
+.mobile-socialnav-icons {
+     height: 30%;
+     width: 70%;
+     padding-top: 50px;
+     background-color: black;
+     display: block;
+     text-align: center;
+     margin: 0 auto;
+
+
+}
+
+.mobile-socialnav-icons i {
+     font-size: 30px;
+}
+
+.button {
+     cursor: pointer !important;
 }
 
 /******************************************
 /* MOBILE STYLES
 /*******************************************/
 
-@media (max-width: 770px){
+@media (max-width: 800px){
+
+main {
+     overflow-y: hidden;
+}
+
+.logo > img{
+     width: 40vw;
+}
 
 body > * {
      overflow-y: hidden;
@@ -1521,67 +1748,17 @@ header > nav {
      display: block;
 }
 
-.mobile-nav {
-     margin: 0 0 0 auto;
-     position: fixed;
-     display: none;
-     right: 0;
-     width: 100%;
-     height: 100vh;
-     min-height: 100%;
-     margin: 0 0 0 auto;
-     background-color: rgba(0, 0, 0, 0.668);
-
-     z-index: 5;
-     transition: all .5s;
-}
-
-
-
 .mobile-nav > ul {
-     margin: 0 0 0 auto;
      width: 70%;
-     height: 70%;
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;     
-     background-color: black;
-     border-left: 6px ridge crimson;
-     gap: 20px;
-     z-index: 10;
 }
 
 .mobile-nav ul li a {
-     color: white;
-     padding: 0;
-     font-size: 1rem;
-     text-decoration: underline 2px crimson;
+     font-size: 1.5rem;
 }
 
 .mobile-nav-logo {
-     width: 150px;
-     text-align: center;
-     margin-bottom: 150px;
+     margin: 50px 0 50px 0;
 }
-
-.mobile-socialnav-icons {
-     height: 30%;
-     width: 70%;
-     padding-top: 50px;
-     background-color: black;
-     display: block;
-     text-align: center;
-     margin: 0 0 0 auto;
-     border-left: 6px ridge crimson;
-
-}
-
-.mobile-socialnav-icons i {
-     font-size: 30px;
-}
-
-
 
 .about {
      display: flex;
@@ -1601,7 +1778,7 @@ header > nav {
 }
 
 .learn-more-button {
-     margin-top: 90px;
+     margin-top: 50px;
 }
 
 .learn-more-button a {
@@ -1753,7 +1930,7 @@ header > nav {
 }
 
 .testimony aside {
-     width: 100%;
+     width: 90%;
 }
 
 .consult-midcopy {
@@ -1849,9 +2026,19 @@ footer figure {
 }
 
 .mailing {
-     text-align: center;
-     padding: 0;
      width: 100%;
+     display: flex;
+     flex-direction: column;
+     padding-left: 0;
+}
+
+.mailing input[type="text"], 
+.mailing input[type="email"] {
+     width: 60%;
+}
+
+.mailing .button {
+     margin-top: 5px;
 }
 
 .footnav {
@@ -1867,6 +2054,10 @@ footer figure {
      align-content: center;
      justify-content: center;
      margin: 15px auto;
+}
+
+.contact-text {
+     padding-right: 0;
 }
 
 }
