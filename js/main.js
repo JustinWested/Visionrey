@@ -53,3 +53,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+
+//Production page youtube video loader
+
+function loadVideo(container) {
+  var videoId = container.getAttribute('data-video-id');
+  var embedCode = '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/' + videoId + '?autoplay=1" frameborder="0" allowfullscreen></iframe>';
+  container.innerHTML = embedCode;
+}
+
+

@@ -198,7 +198,7 @@ nav ul li a {
 }
 
 section p {
-     font-size: clamp(.75rem, 1.4vw, 1rem);
+     font-size: 1rem;
    
 }
 
@@ -561,6 +561,98 @@ select {
 }
 
 
+.sundown-hero {
+     height: 350px;
+     background-image: url(/images/sundown.webp);
+     background-position: bottom;
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+
+.sundown-main .sundown-list .cont-text-cont-main li{
+     text-align: left;
+     padding: 10px;
+}
+
+.sundown-main {
+     padding-bottom: 60px;
+}
+
+.sundown-main img {
+     width: 70%;
+     display: block;
+     margin: 0 auto;
+}
+
+.sundown-header {
+     display: block;
+     width: 60%;
+     margin: 100px auto;
+     text-align: center;
+}
+
+.sundown-header h1 {
+     font-size: 4.5rem;
+     color: crimson;
+     font-weight: 500;
+}
+
+.sundown-header span {
+     text-align: center;
+     display: block;
+     font-style: italic;
+     font-size: 2rem;
+     font-weight: 200;
+}
+
+.sundown-header p {
+     padding-top: 40px;
+     font-size: 2rem;
+}
+
+.crew-bios {
+     width: 700px;
+     margin: 0 auto;
+}
+
+.crew-bios h3 {
+     font-size: 5rem;
+     font-weight: 200;
+     text-align: center;
+     margin-bottom: 20px;
+}
+
+.crew-bios .tony-pic,
+.crew-bios .allison-pic,
+.crew-bios .soft-pic{
+     width: 40%;
+     height: auto;
+     margin: 25px;
+     float: left;
+}
+
+
+.crew-bios .kathbath-pic,
+.crew-bios .enrique-pic,
+.crew-bios .mackelmore-pic{
+     width: 40%;
+     height: auto;
+     margin: 25px;
+     float: right;
+}
+
+.crew-bios h4 {
+     padding: 0;
+     margin: 0;
+     font-size: 2rem;
+}
+
+.crew-bios h5 {
+     padding: 0;
+     margin: 0;
+     color: crimson;
+     font-size: 1rem;
+}
 
 /******************************************
 /* ADDITIONAL STYLES
@@ -1260,7 +1352,7 @@ hr {
 /* VIDEOGRAPHY PAGE
 /*******************************************/
 
-.video-container {
+.video-main {
      display: grid;
      grid-template-columns: 25% 25% 25% 25%;
      color: white;
@@ -1269,11 +1361,35 @@ hr {
      margin-bottom: 60px;
 }
 
+
+
+.video-main .main-vid {
+     display: grid;
+     grid-column: 1/5;
+     height: 650px;
+     position: relative;
+     overflow: hidden;
+}
+
+.video-main img {
+     width: 100%;
+     height: auto;
+
+}
+.video-main section {
+     cursor: pointer;
+}
+
+
+.video-main h3 {
+     position: absolute;
+}
+
 .vid-foot {
      margin-top: 50px;
 }
 
-.video-container h1{
+.video-main h1{
      color: crimson;
      font-size: clamp(2rem, 8vw, 8rem);     
 
@@ -1318,26 +1434,20 @@ hr {
      box-shadow: none;
 }
 
-.hero-vid {
+
+.vid-zero {
      display: grid;
      grid-column: 1/5;
      height: 650px;
      position: relative;
-
-     background-image: url(/images/filam.jpg);
-     background-size: cover;
 }
+
 
 .vid-one {
      display: grid;
      grid-column: 1/3;
      height: 400px;
      position: relative;
-
-     background-image: url(/images/mposter.png);
-     background-size: cover;
-     background-repeat: no-repeat;
-     background-position: center;
 }
 
 .vid-two {
@@ -1345,11 +1455,6 @@ hr {
      grid-column: 3/5;
      height: 400px;
      position: relative;
-
-     background-image: url(/images/bloodandsand.webp);
-     background-size: cover;
-     background-repeat: no-repeat;
-     background-position: center;
 }
 
 .vid-three {
@@ -1357,11 +1462,6 @@ hr {
      grid-column: 1/3;
      height: 400px;
      position: relative;
-
-     background-image: url(/images/norm.jpg);
-     background-size:cover;
-     background-repeat: no-repeat;
-     background-position: center;
 }
 
 .vid-four {
@@ -1369,28 +1469,13 @@ hr {
      grid-column: 3/5;
      height: 400px;
      position: relative;
-
-     background-image: url(/images/withering.jpg);
-     background-size:cover;
-     background-repeat: no-repeat;
-     background-position: center;
-
 }
 
-.commercial-container .hero-vid {
-     background-image: url(/images/milftime.jpg);
-}
-
-.reels-container .hero-vid {
-     background-image: url(/images/apocalypse.jpg);
-}
-
-.reels-container .vid-one {
-     background-image: linear-gradient(red, black);
-}
-
-.reels-container .vid-two {
-     background-image: linear-gradient(white, red);
+.vid-one,
+.vid-two,
+.vid-three,
+.vid-four {
+     overflow: hidden;
 }
 
 .bts-container .video-text {
@@ -1404,13 +1489,16 @@ hr {
 
 }
 
-.video-container figure {
+.video-main h3 {
      z-index: 2;
-     font-size: 2.2em;
+     font-size: 3em;
      font-weight: normal;
+     top: 20px;
+     left: 30px;
+     pointer-events: none;
 }
 
-.hero-vid:after,
+.vid-zero:after,
 .vid-two:after,
 .vid-three:after {
      content:'';
@@ -1419,7 +1507,9 @@ hr {
      top: 0;
      width:100%;
      height:100%;
-     background: rgba(255, 0, 0, 0.35);
+     background: rgba(195, 9, 9, 0.464);
+     pointer-events: none;
+
    }
 
 .vid-one:after,
@@ -1431,6 +1521,7 @@ hr {
      width:100%;
      height:100%;
      background: rgba(0, 0, 0, 0.35);
+     pointer-events: none;
    }
 
 
@@ -1890,7 +1981,7 @@ header > nav {
 }
 
 
-.video-container {
+.video-main {
      display: flex;
      flex-direction: column;
      margin-bottom: 30px;
@@ -1902,8 +1993,8 @@ header > nav {
 }
 
 .video-text .highlight {
-     border: 4px solid crimson;
-     background-color: white;
+     border: 4px solid white;
+     background-color: crimson;
      color: crimson;
      background-image: none;
 }
@@ -1980,17 +2071,30 @@ footer {
 } 
 
 
-.video-container > section {
+.video-main > section {
      width: 100%;
      height: 260px;
      margin-bottom: 10px;
 }
 
-.video-container h3 {
+.video-main .main-vid {
+     width: 100%;
+     height: 260px;
+}
+
+.video-main .main-vid img {
+     height: 260px;
+     width: 100%;
+     position: absolute;
+     object-fit: cover;
+     object-position: 50% 50%;
+}
+
+.video-main h3 {
      font-size: 1.5rem;
 }
 
-.video-container span {
+.video-main span {
      font-size: 1rem;
 }
 
@@ -2060,4 +2164,19 @@ footer figure {
      padding-right: 0;
 }
 
+.video-hero {
+     background-position:unset;
 }
+
+.crew-bios {
+     width: 95%;
+}
+
+
+}
+
+@media (prefers-reduced-motion: no-preference) {
+     html {
+       scroll-behavior: smooth;
+     }
+   }
