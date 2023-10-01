@@ -496,7 +496,7 @@ section p {
 }
 
 .contact-text > * {
-     font-size: clamp(.75rem, 1.4vw, 1.5rem);
+     font-size: clamp(1rem, 1.4vw, 1.5rem);
 }
 
 .contact-text > h3 {
@@ -761,7 +761,7 @@ footer {
 .social-footer-left > nav {
      text-align: center;
      padding-left: 1em;
-     font-size: clamp(.75rem, 2vw, 1.5rem);
+     font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
 .social-footer-left > figure {
@@ -802,6 +802,7 @@ footer {
      display: flex;
      flex-direction: column;
      text-align: left;
+     font-size: 1.3rem;
 }
 
 .footnav li {
@@ -872,7 +873,7 @@ footer {
      width: 100%;
      
 
-     text-align: center;
+     text-align: left;
      margin: 0;
      padding: 0;
 }
@@ -880,7 +881,8 @@ footer {
 .cont-text-cont-main li {
      list-style-type: none;
      font-weight: 200;
-     font-size: 1.3em;
+     font-size: 1.1rem;
+     padding: 15px;
      background-color: rgba(105, 105, 105, 0.256);
 }
 
@@ -911,7 +913,7 @@ footer {
 .contact-form label,
 .contact-form input,
 .contact-form select {
-     font-size: 1.5em;
+     font-size: 25px;
      font-weight: 200;
      width: 100%;
      margin: 10px;
@@ -1406,7 +1408,7 @@ hr {
 }
 
 .video-text p {
-     font-size: clamp(.75rem, 1.4vw, 2.3rem);     
+     font-size: clamp(1rem, 1.4vw, 2.3rem);     
 
 }
 
@@ -1760,6 +1762,7 @@ header > nav {
      flex-direction: column;
      justify-content: center;
      align-items: center;     
+
      background-color: black;
      border-left: 6px ridge crimson;
      gap: 20px;
@@ -2156,11 +2159,11 @@ footer figure {
 .footnav > ul {
      display: flex;
      flex-direction: row;
-     font-size: .8rem;
+     font-size: 1rem;
      font-weight: 200;
      align-content: center;
      justify-content: center;
-     margin: 15px auto;
+     margin: 5px auto;
 }
 
 .contact-text {
