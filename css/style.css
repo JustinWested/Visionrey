@@ -62,12 +62,12 @@ input {
 
 .logo {
      min-width: 90%;
+     height: 100%;
 }
    
 .logo > img{
      position: absolute;
      width: 20vw;
-     height: auto;
 }
    
 
@@ -301,28 +301,25 @@ section p {
 .poster-container > h2, 
 .poster-container > p {
      margin: 0;
-     padding: 0 4em;
+     padding: 0 3em;
      background-color: #000000b3;
      width: 70%;
      color: #ffffff;
 }
 
 .poster-container > h2 {
-     background-image: url(../images/whois.webp);
-     background-size:contain;
-     background-repeat: no-repeat;
-     background-position: center;
-     padding-top: 1em;
-     color: rgba(164, 18, 5, 0);
-     font-weight: 900;
-     font-size: clamp(1.5rem, 3vw, 3em);
+     font-weight:bolder;
+     padding: .5em;
+     color: crimson;
+
+     font-size: clamp(1.5rem, 4vw, 5em);
 
 }
 
 .poster-container > p {
-     padding-bottom: 20px;
-     font-size: clamp(1rem, 2.5vw, 2em);
-     font-weight: 400;
+     font-size: clamp(1.5rem, 3vw, 2em);
+     font-weight: 300;
+     font-style: italic;
 }
 
 .poster-container {
@@ -365,6 +362,7 @@ section p {
      height: 260px;
      width: 30vw;
      position: absolute;
+     border-radius: 30px;
 }
 
 
@@ -549,7 +547,7 @@ select {
      padding: .5em 0;
      width: 20%;
      border: 2px solid crimson;
-     border-radius: 4px;
+     border-radius: 12px;
 }
 
 .contact-us-button {
@@ -1715,7 +1713,7 @@ hr {
 
 .posters p {
      display: inline-block;
-     padding-bottom: 1.2rem;
+     padding-bottom: 2rem;
 }
 
 header {
@@ -1819,364 +1817,618 @@ header > nav {
      cursor: pointer !important;
 }
 
+.showcase {
+     display: grid;
+     width: 80%;  
+     margin: 30px auto;
+     grid-template-columns: 1fr 1fr; 
+     gap: 0 50px;
+     justify-content: center;
+}
+
+.showcase h2 a {
+     text-decoration: none;
+     color: white;
+}
+
+.showcase h2,
+.showcase > h4 {
+     grid-column: 1 / -1;
+     margin: 0 auto;
+     font-size: 3rem;
+}
+
+.showcase h2:nth-child(1) {
+     font-size: 4rem;
+     padding-bottom: 25px;     
+}
+
+.showcase h4 {
+     font-size: 2rem;
+     padding-top: 0;
+     width: 100%;
+     color: crimson;
+}
+
+.sponsor-images{
+     grid-column: 1 / -1;
+     justify-self: center;
+}
+
+.showcase img {
+     width: 325px;
+     padding: 20px;
+}
+.showcase-dates {
+     justify-self: end;
+     text-align: right;
+}
+
+.showcase p {
+     margin: 3px;
+     font-size: 1.5rem;
+}
+
+.showcase a {
+    grid-column: 1 / -1;
+    justify-self: center;
+    padding-top: 30px;
+}
+
+.tickets-button {
+     width: 400px;
+     height: 65px;
+     font-size: 2rem;
+     padding: 0;
+}
+
+.showcase-hero,
+.showcase-hero .hero-vid {
+     height: 80vh;
+     object-fit: cover;
+     object-position: top center;
+}
+
+
+.showcase-text {
+     text-align: center;
+     padding-right: 0;
+     font-size: 2rem;
+}
+.showcase-text p {
+     font-size: 1.7rem;
+     padding: 15px;
+}
+
+.showcase-text  .tickets-button {
+     margin: 35px;
+     height: 40px;
+     font-size: 1.5rem;
+}
+
+
+
+.sponsor-text {
+     margin: 150px auto;
+}
+
+.sponsor-text p {
+     font-size: 1.3rem;
+}
+
+.sponsor-text img {
+     width: 80%;
+     min-width: 500px;
+     margin-top: 90px;
+}
+
+.sponsor-button {
+     display: flex;
+     align-self: center;
+     text-decoration: none;
+}
+
+.sponsor-button .button {
+     margin: 40px auto;
+     font-size: clamp(2rem, 2.5vw, 4rem);
+     padding: 20px;
+     width: auto;
+     height: auto;
+}
+
+
+.sponsor-tiers {
+     display: block;
+     width: 500px;
+     margin: 0 auto;
+}
+
+.sponsor-container {
+     width: 100%;
+
+     padding: 60px;
+}
+
+.sponsor-body {
+          background-image: url(/images/VisionRey_TheaterScreen_Static_Logo_4K.png);
+     background-attachment: fixed;
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+     box-shadow: 0 0 1300px 1300px rgba(0, 0, 0, 0.893) inset;
+}
+
+.sponsor-body .contact-form {
+     background-color: rgba(0, 0, 0, 0);
+     margin-top: 0;
+}
+
+.sponsor-tiers p {
+     font-size: 2rem;
+     margin: 0 0 25px 0;
+}
+
+.gold, .silver, .bronze {
+     font-size: 4.3rem;
+     margin: 0;
+     font-weight: 400;
+     margin-top: 60px;
+}
+
+.gold {
+     color: rgb(208, 191, 95);
+}
+
+.silver {
+     color: silver;
+}
+
+.bronze {
+     color: rgb(151, 122, 84);
+}
+
+.sponsor-contact img {
+     width: 600px;
+     margin: 80px auto 0;
+     display: flex;
+     justify-content: center;
+}
+
+.sponsor-contact .contact-main {
+     margin-top: 0px;
+}
+
+.sponsor-tiers li {
+     font-size: 1.3rem;
+     font-weight: 300;
+     padding: 3px 0;
+}
+
+
+
+
+
+/* Carousel Container */
+/* Keyframes for animation */
+@keyframes scroll {
+     0% { transform: translateX(0); }
+     100% { transform: translateX(calc(-470px * 5)); }
+ }
+ 
+ /* Styling for slider */
+ .slider {
+     background: black;
+     box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+     height: 600px;
+     margin: 120px auto;
+     overflow: hidden;
+     position: relative;
+     width: 95%;
+ }
+ 
+ /* Before and After pseudo-elements for slider */
+ .slider::before,
+ .slider::after {
+     /* This is the inlined white-gradient mixin */
+     background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0) 100%);
+     content: "";
+     height: 600px;
+     position: absolute;
+     width: 200px;
+     z-index: 2;
+ }
+ 
+ .slider::after {
+     right: 0;
+     top: 0;
+     transform: rotateZ(180deg);
+ }
+ 
+ .slider::before {
+     left: 0;
+     top: 0;
+ }
+ 
+ /* Styling for slide-track */
+ .slider .slide-track {
+     /* Animation speed replaced with its value */
+     animation: scroll 40s linear infinite;
+     display: flex;
+     width: calc(470px * 10);
+ }
+ 
+ /* Styling for each slide */
+ .slider .slide {
+     height: 600px;
+     width: 400px;
+     margin-right: 70px;
+ }
+ 
+
+
+ 
+
 /******************************************
 /* MOBILE STYLES
 /*******************************************/
 
-@media (max-width: 800px){
-
-main {
-     overflow-y: hidden;
-}
-
-.logo > img{
-     width: 40vw;
-}
-
-body > * {
-     overflow-y: hidden;
-}
-
-header > nav {
-     padding: 0;
-}
-
-#hamburger {
-     display: block;
-}
-
-.mobile-nav > ul {
-     width: 70%;
-}
-
-.mobile-nav ul li a {
-     font-size: 1.5rem;
-}
-
-.mobile-nav-logo {
-     margin: 50px 0 50px 0;
-}
-
-.about {
-     display: flex;
-     flex-direction: column;
-     height: fit-content;
-}
-
-.about aside p {
-     font-size: 1rem;
-     font-weight: 400;
-}
-
-.about aside h4{
-     margin-top: 40px;
-     font-size: 1.2rem;
-     font-weight: 200;
-}
-
-.learn-more-button {
-     margin-top: 50px;
-}
-
-.learn-more-button a {
-     font-size: 1.3rem;
-}
-
-.head-vid {
-     height: 350px;
-}
-
-.logo-row > * {
-     width: 100%;
-}
-
-.logo-row {
-     margin: 0 ;
-     padding: 0 15px;
-     gap: 15px;
-}
-
-.poster-container {
-     width: 100%;
-     margin: auto 0;
-     height: 400px;
-}
-
-.poster-container > * {
-     padding: 5px 0!important;
-     width: 100% !important;
-}
-
-.poster-container h2 {
-     display: inline-block;
-     padding: 0 auto;
-}
-
-.poster-container p {
-     font-size: .9rem;
-}
-
-.posters {
-     height: 400px;
-     background-attachment: unset;
-}
-
-.testimony-contact {
-     display: flex;
-     flex-direction: column;
-}
-
-.testimony {
-     width: 100%;
-     margin: 10px 0;
-}
-
-.contact-text {
-     width: 90%;
-     margin: 0 auto;
-}
-
-
-.learn-header {
-     font-size: 3rem;
-}
-
-.learn-container {
-     width: 95%;
-     margin: 20px auto;
-     padding: 15px;
-}
-
-.learn-container p {
-     width: 100%;
-}
-
-
-.contact-info {
-     display: none;
-}
-
-.contact-main {
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-content: center;
-}
-
-.wedding-header h1 {
-     margin-top: 80px;
-     font-size: 2.5rem;
-}
-
-.wedding-hero {
-     display: flex;
-     flex-direction: column;
-     height: fit-content;
-}
-
-.wedding-hero figure {
-     display: flex;
-     height: 400px;
-     min-height: 400px;
-     width: 300px;
-     margin: 16 auto;
-}
-
-.wedding-hero-text p {
-     display: block;
-}
-
-
-.video-main {
-     display: flex;
-     flex-direction: column;
-     margin-bottom: 30px;
-}
-
-.video-text {
-     width: 90%;
-     margin: 30px auto;
-}
-
-.video-text .highlight {
-     border: 4px solid white;
-     background-color: crimson;
-     color: crimson;
-     background-image: none;
-}
-
-.consult-header p {
-     margin: 24px 0;
-     font-size: 1.3rem;
-     font-weight: 200;
-}
-
-.consult-header h3 {
-     margin: 24px 0;
-     font-size: 2rem;
-}
-
-.testimony-consult-block {
-     display: flex;
-     flex-direction: column;
-     margin-top: 20px;
-}
-
-.testimony-consult-block .testimony {
-     width: 90%;
-}
-
-.testimony aside {
-     width: 90%;
-}
-
-.consult-midcopy {
-     width: 90%;
-     margin: 30px auto;
-     font-size: 1.2rem;
-}
-
-.prices {
-     width: 85%;
-}
-
-.prices li {
-     font-size: 1rem;
-}
-
-.prices span {
-     font-size: 1rem;
-}
-
-.prices h2 {
-     margin: 15px 0;
-     font-size: 1.8rem;
-}
-
-.prices a {
-     font-size: 1.5rem;
-}
-
-.consult-form-container {
-     display: flex;
-     flex-direction: column;
-     padding: 0;
-}
-
-.consult-form {
-     margin: 15px auto;
-     width: 95%;
-}
-
-
-footer {
-     padding-top: 20px;
-     display: flex;
-     flex-direction: column;
-     height: fit-content;
-} 
-
-
-.video-main > section {
-     width: 100%;
-     height: 260px;
-     margin-bottom: 10px;
-}
-
-.video-main .main-vid {
-     width: 100%;
-     height: 260px;
-}
-
-.video-main .main-vid img {
-     height: 260px;
-     width: 100%;
-     position: absolute;
-     object-fit: cover;
-     object-position: 50% 50%;
-}
-
-.video-main h3 {
-     font-size: 1.5rem;
-}
-
-.video-main span {
-     font-size: 1rem;
-}
-
-.masonry-gallery {
-     margin: 0 ;
-}
-
-
-.container {
-     margin-bottom: 60px;
-     height: fit-content;
-}
-
-.container .box {
-     height: 300px;
-}
-
-
-
-
-
-footer figure {
-     display: none;
-}
-
-.social-footer-left {
-     width: 100%;
-}
-
-.social-footer-left > nav {
-     font-size: 25px;
-     padding: 0;
-}
-
-.mailing {
-     width: 100%;
-     display: flex;
-     flex-direction: column;
-     padding-left: 0;
-}
-
-.mailing input[type="text"], 
-.mailing input[type="email"] {
-     width: 60%;
-}
-
-.mailing .button {
-     margin-top: 5px;
-}
-
-.footnav {
-     width: 100%;
-     height: fit-content;
-}
-
-.footnav > ul {
-     display: flex;
-     flex-direction: row;
-     font-size: 1rem;
-     font-weight: 200;
-     align-content: center;
-     justify-content: center;
-     margin: 5px auto;
-}
-
-.contact-text {
-     padding-right: 0;
-}
-
-.video-hero {
-     background-position:unset;
-}
-
-.crew-bios {
-     width: 95%;
-}
+          @media (max-width: 800px){
+          
+          main {
+               overflow-y: hidden;
+               overflow-x: hidden;
+          }
+
+          .logo > img{
+               width: 40vw;
+          }
+
+          body > * {
+               overflow-y: hidden;
+               overflow-x: hidden;
+          }
+
+          header > nav {
+               padding: 0;
+          }
+
+          #hamburger {
+               display: block;
+          }
+
+          .mobile-nav > ul {
+               width: 70%;
+          }
+
+          .mobile-nav ul li a {
+               font-size: 1.5rem;
+          }
+
+          .mobile-nav-logo {
+               margin: 50px 0 50px 0;
+          }
+
+          .about {
+               display: flex;
+               flex-direction: column;
+               height: fit-content;
+          }
+
+          .about aside p {
+               font-size: 1rem;
+               font-weight: 400;
+          }
+
+          .about aside h4{
+               margin-top: 40px;
+               font-size: 1.2rem;
+               font-weight: 200;
+          }
+
+          .learn-more-button {
+               margin-top: 50px;
+          }
+
+          .learn-more-button a {
+               font-size: 1.3rem;
+          }
+
+          .head-vid {
+               height: 350px;
+          }
+
+          .logo-row > * {
+               width: 100%;
+          }
+
+          .logo-row {
+               margin: 0 ;
+               padding: 0 15px;
+               gap: 15px;
+          }
+
+          .poster-container {
+               width: 100%;
+               margin: auto 0;
+               height: 400px;
+          }
+
+          .poster-container > * {
+               padding: 10px 3px!important;
+               width: 100% !important;
+          }
+
+          .poster-container h2 {
+               display: inline-block;
+               padding: 0 auto;
+          }
+
+          .poster-container p {
+               font-size: 1.4rem;
+               margin: 0 30px;
+          }
+
+          .posters {
+               height: 400px;
+               background-attachment: unset;
+          }
+
+          .testimony-contact {
+               display: flex;
+               flex-direction: column;
+          }
+
+          .testimony {
+               width: 100%;
+               margin: 10px 0;
+          }
+
+          .contact-text {
+               width: 90%;
+               margin: 0 auto;
+          }
+
+
+          .learn-header {
+               font-size: 3rem;
+          }
+
+          .learn-container {
+               width: 95%;
+               margin: 20px auto;
+               padding: 15px;
+          }
+
+          .learn-container p {
+               width: 100%;
+          }
+
+
+          .contact-info {
+               display: none;
+          }
+
+          .contact-main {
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               align-content: center;
+          }
+
+          .wedding-header h1 {
+               margin-top: 80px;
+               font-size: 2.5rem;
+          }
+
+          .wedding-hero {
+               display: flex;
+               flex-direction: column;
+               height: fit-content;
+          }
+
+          .wedding-hero figure {
+               display: flex;
+               height: 400px;
+               min-height: 400px;
+               width: 300px;
+               margin: 16 auto;
+          }
+
+          .wedding-hero-text p {
+               display: block;
+          }
+
+
+          .video-main {
+               display: flex;
+               flex-direction: column;
+               margin-bottom: 30px;
+          }
+
+          .video-text {
+               width: 90%;
+               margin: 30px auto;
+          }
+
+          .video-text .highlight {
+               border: 4px solid white;
+               background-color: crimson;
+               color: crimson;
+               background-image: none;
+          }
+
+          .consult-header p {
+               margin: 24px 0;
+               font-size: 1.3rem;
+               font-weight: 200;
+          }
+
+          .consult-header h3 {
+               margin: 24px 0;
+               font-size: 2rem;
+          }
+
+          .testimony-consult-block {
+               display: flex;
+               flex-direction: column;
+               margin-top: 20px;
+          }
+
+          .testimony-consult-block .testimony {
+               width: 90%;
+          }
+
+          .testimony aside {
+               width: 90%;
+          }
+
+          .consult-midcopy {
+               width: 90%;
+               margin: 30px auto;
+               font-size: 1.2rem;
+          }
+
+          .prices {
+               width: 85%;
+          }
+
+          .prices li {
+               font-size: 1rem;
+          }
+
+          .prices span {
+               font-size: 1rem;
+          }
+
+          .prices h2 {
+               margin: 15px 0;
+               font-size: 1.8rem;
+          }
+
+          .prices a {
+               font-size: 1.5rem;
+          }
+
+          .consult-form-container {
+               display: flex;
+               flex-direction: column;
+               padding: 0;
+          }
+
+          .consult-form {
+               margin: 15px auto;
+               width: 95%;
+          }
+
+
+          footer {
+               padding-top: 20px;
+               display: flex;
+               flex-direction: column;
+               height: fit-content;
+          } 
+
+
+          .video-main > section {
+               width: 100%;
+               height: 260px;
+               margin-bottom: 10px;
+          }
+
+          .video-main .main-vid {
+               width: 100%;
+               height: 260px;
+          }
+
+          .video-main .main-vid img {
+               height: 260px;
+               width: 100%;
+               position: absolute;
+               object-fit: cover;
+               object-position: 50% 50%;
+          }
+
+          .video-main h3 {
+               font-size: 1.5rem;
+          }
+
+          .video-main span {
+               font-size: 1rem;
+          }
+
+          .masonry-gallery {
+               margin: 0 ;
+          }
+
+
+          .container {
+               margin-bottom: 60px;
+               height: fit-content;
+          }
+
+          .container .box {
+               height: 300px;
+          }
+
+
+
+
+
+          footer figure {
+               display: none;
+          }
+
+          .social-footer-left {
+               width: 100%;
+          }
+
+          .social-footer-left > nav {
+               font-size: 25px;
+               padding: 0;
+          }
+
+          .mailing {
+               width: 100%;
+               display: flex;
+               flex-direction: column;
+               padding-left: 0;
+          }
+
+          .mailing input[type="text"], 
+          .mailing input[type="email"] {
+               width: 60%;
+          }
+
+          .mailing .button {
+               margin-top: 5px;
+          }
+
+          .footnav {
+               width: 100%;
+               height: fit-content;
+          }
+
+          .footnav > ul {
+               display: flex;
+               flex-direction: row;
+               font-size: 1rem;
+               font-weight: 200;
+               align-content: center;
+               justify-content: center;
+               margin: 5px auto;
+          }
+
+          .contact-text {
+               padding-right: 0;
+          }
+
+          .video-hero {
+               background-position:unset;
+          }
+
+          .crew-bios {
+               width: 95%;
+          }
 
 
 }
