@@ -1908,15 +1908,15 @@ header > nav {
 
 
 
-.sponsor-text {
+.sponsor-txt {
      margin: 150px auto;
 }
 
-.sponsor-text p {
+.sponsor-txt p {
      font-size: 1.3rem;
 }
 
-.sponsor-text img {
+.sponsor-txt img {
      width: 80%;
      min-width: 500px;
      margin-top: 90px;
