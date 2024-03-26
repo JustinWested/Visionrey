@@ -1444,6 +1444,7 @@ hr {
      grid-column: 1/5;
      height: 650px;
      position: relative;
+     filter: saturate(1);
 }
 
 
@@ -1480,6 +1481,7 @@ hr {
 .vid-three,
 .vid-four {
      overflow: hidden;
+     filter: saturate(2);
 }
 
 .winner-thumb {
