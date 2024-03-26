@@ -480,9 +480,10 @@ section p {
 .video-hero {
      height: 350px;
      background-image: url(/images/hero_actor.webp);
-     background-position: top -230px right 0px;
+     background-position: top 0 center 0;
      background-repeat: no-repeat;
      background-size: cover;
+     
 }
 
 .contact-text {
@@ -1355,7 +1356,7 @@ hr {
 .video-main {
      display: grid;
      grid-template-columns: 25% 25% 25% 25%;
-     color: white;
+     /* color: white; */
      width: 100%;
      font-weight: normal;
      margin-bottom: 60px;
@@ -1377,8 +1378,8 @@ hr {
      object-fit: cover;
      align-content: center;
      justify-content: center;
-
 }
+
 .video-main section {
      cursor: pointer;
 }
@@ -1395,14 +1396,14 @@ hr {
 .video-main h1{
      color: crimson;
      font-size: clamp(2rem, 8vw, 8rem);     
-
+     text-align: center;
      margin: 0;
 }
 
 .video-text span {
      width: fit-content;
      font-size: clamp(.80rem, 2vw, 3rem);   
-     margin-left: 20%;
+     justify-self: center;
 }
 
 .video-text p {
@@ -1481,6 +1482,12 @@ hr {
      overflow: hidden;
 }
 
+.winner-thumb {
+     position: absolute;
+     bottom: 0;
+}
+
+
 .bts-container .video-text {
      grid-column: 1/5;
      margin: 50px auto;
@@ -1510,7 +1517,7 @@ hr {
      top: 0;
      width:100%;
      height:100%;
-     background: rgba(195, 9, 9, 0.464);
+     /* background: rgba(195, 9, 9, 0.464); */
      pointer-events: none;
 
    }
@@ -1523,7 +1530,7 @@ hr {
      top: 0;
      width:100%;
      height:100%;
-     background: rgba(0, 0, 0, 0.35);
+     /* background: rgba(0, 0, 0, 0.35); */
      pointer-events: none;
    }
 
