@@ -700,7 +700,8 @@ header > h1 {
      .hero-vid {
           z-index: 1;
           position: absolute;
-          height: 580px;
+          height: 60vh;
+          min-height: 600px;
           width: 100%;
           object-fit: cover;
 
@@ -1480,7 +1481,6 @@ hr {
 .vid-three,
 .vid-four {
      overflow: hidden;
-     filter: saturate(2);
 }
 
 .winner-thumb {
