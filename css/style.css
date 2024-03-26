@@ -1444,7 +1444,6 @@ hr {
      grid-column: 1/5;
      height: 650px;
      position: relative;
-     filter: saturate(1);
 }
 
 
