@@ -836,6 +836,7 @@ footer {
 }
 
 
+
 /******************************************
 /* LEARN MORE ABOUT ALLISON PAGE
 /*******************************************/
@@ -1831,7 +1832,6 @@ header > nav {
      margin: 30px auto;
      grid-template-columns: 1fr 1fr; 
      gap: 0 50px;
-     justify-content: center;
 }
 
 .showcase h2 a {
@@ -1860,13 +1860,20 @@ header > nav {
 
 .sponsor-images{
      grid-column: 1 / -1;
-     justify-self: center;
+     width: 100%;
+     margin: 0 80px;
 }
 
 .showcase img {
      width: 325px;
      padding: 20px;
 }
+
+.sklogo {
+     height: auto;
+     width: 200px !important;
+}
+
 .showcase-dates {
      justify-self: end;
      text-align: right;
@@ -2438,6 +2445,18 @@ header > nav {
                width: 95%;
           }
 
+
+          .sponsor-images{
+               margin: 0;
+          }
+
+          .sponsor-txt img {
+               min-width: 0;
+             }
+
+             .showcase-text .tickets-button {
+               margin: 0;
+             }
 
 }
 
