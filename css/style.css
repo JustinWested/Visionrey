@@ -486,12 +486,17 @@ section p {
      
 }
 
+
 .contact-text {
      width: 50%;
      margin: 0 auto;
      padding-right: 10%;
      color: #ffffff;
      gap: 15px;
+}
+
+.contact-text .speaker-container {
+     width: 100%;
 }
 
 .contact-text > * {
@@ -658,7 +663,9 @@ select {
 /*******************************************/
 
 
-
+.speakers img {
+     width: 100%;
+}
 
 header > h1 {
      display: none;
